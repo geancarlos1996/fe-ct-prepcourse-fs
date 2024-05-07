@@ -145,14 +145,6 @@ return conteo;
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
-
-   [objetoProducto].calcularPrecioDescuento= function(){
-       return  this.precio-(this.precio*this.porcentajeDeDescuento)
-      }
-   return [objetoProducto].calcularPrecioDescuento()
-}
-    
-
    // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
    // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
    // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
@@ -163,6 +155,15 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
+
+   objetoProducto.calcularPrecioDescuento= function(){
+       return  this.precio-(this.precio*this.porcentajeDeDescuento)
+      }
+   return objetoProducto.calcularPrecioDescuento()
+}
+    
+
+   
 
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
